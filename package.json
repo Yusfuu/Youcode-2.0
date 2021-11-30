@@ -2,14 +2,18 @@
   "name": "ucode",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "start vite & start yarn json-server ",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "json-server": "json-server --watch -c json-server.json db.json"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.4",
     "tailwindcss": "^2.2.19",
     "vite": "^2.6.4"
+  },
+  "dependencies": {
+    "json-server": "^0.17.0"
   }
 }
