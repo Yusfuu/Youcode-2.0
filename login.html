@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Register</title>
+  <title>Login</title>
 </head>
 
 <body>
@@ -19,10 +19,10 @@
             mb-4
             md:mb-8
           ">
-        Register
+        Login
       </h2>
 
-      <form class="max-w-lg border rounded-lg mx-auto" id="register">
+      <form class="max-w-lg border rounded-lg mx-auto" id="login">
         <div class="flex flex-col gap-4 p-4 md:p-8">
           <div>
             <label for="email" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Email</label>
@@ -43,26 +43,8 @@
           </div>
 
           <div>
-            <label for="fullName" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Full Name</label>
-            <input name="fullName" class="
-                  w-full
-                  bg-gray-50
-                  text-gray-800
-                  border
-                  focus:ring
-                  ring-indigo-300
-                  rounded
-                  outline-none
-                  transition
-                  duration-100
-                  px-3
-                  py-2
-                " />
-          </div>
-
-          <div>
-            <label for="age" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Age</label>
-            <input type="number" min="18" max="35" name="age" class="
+            <label for="password" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Password</label>
+            <input name="password" class="
                   w-full
                   bg-gray-50
                   text-gray-800
@@ -96,19 +78,20 @@
                 px-8
                 py-3
               ">
-            Register
+            Log in
           </button>
         </div>
+
         <div class="flex justify-center items-center bg-gray-100 p-4">
           <p class="text-gray-500 text-sm text-center">
-            I have an account?
-            <a href="/index.html" class="
+            Don't have an account?
+            <a href="/register.html" class="
                   text-indigo-500
                   hover:text-indigo-600
                   active:text-indigo-700
                   transition
                   duration-100
-                ">Submit</a>
+                ">Register</a>
           </p>
         </div>
       </form>
