@@ -1,6 +1,10 @@
 import "./style.css";
 import { Candidate } from "./classes/User";
+<<<<<<< HEAD
 import { Fetcher } from "./classes/Fetcher";
+=======
+import { popup } from "./helpers/popup";
+>>>>>>> a7a51c091ea97091ad7be967cd23c4d40f37c24d
 
 const pathname = location.pathname;
 
@@ -36,34 +40,44 @@ const useLocalStore = (key) => {
 }
 
 if (pathname === "/register.html") {
-  const form = document.querySelector('#register');
-  form.addEventListener('submit', async (event) => {
+  const form = document.querySelector("#register");
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const user = {
       email: form.elements.email.value,
       cin: form.elements.cin.value,
       fullName: form.elements.fullName.value,
       age: form.elements.age.value,
+<<<<<<< HEAD
     }
+=======
+    };
+    const candidate = new Candidate(user);
+>>>>>>> a7a51c091ea97091ad7be967cd23c4d40f37c24d
 
     const candidate = new Candidate(user);
 
+<<<<<<< HEAD
     const createdCandidate = await candidate.register();
     const [, setCandidates] = useLocalStore('ucode');
     setCandidates(createdCandidate);
   })
+=======
+    // const __user = await candidate.validate().create();
+    // console.log(__user);
+  });
+>>>>>>> a7a51c091ea97091ad7be967cd23c4d40f37c24d
 }
 
-
 if (pathname === "/login.html") {
-  const form = document.querySelector('#login');
-  form.addEventListener('submit', async (event) => {
+  const form = document.querySelector("#login");
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const credential = {
       email: form.elements.email.value,
       password: form.elements.password.value,
-    }
+    };
 
     const candidate = new Candidate(credential);
 
