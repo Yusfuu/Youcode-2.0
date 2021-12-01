@@ -1,23 +1,18 @@
 import "./style.css";
 import { Candidate } from "./classes/User";
-<<<<<<< HEAD
-import { Fetcher } from "./classes/Fetcher";
-=======
+import { Question as q } from "./classes/Question";
 import { popup } from "./helpers/popup";
->>>>>>> a7a51c091ea97091ad7be967cd23c4d40f37c24d
 
-const pathname = location.pathname;
+const pathName = location.pathname;
 
-document.addEventListener('readystatechange', (event) => {
+document.addEventListener("readystatechange", (event) => {
   if (event.target.readyState === "complete") {
-    const [candidates, setCandidates] = useLocalStore('ucode');
+    const [candidates, setCandidates] = useLocalStore("ucode");
   }
 });
 
-
 const Question = (question) => {
-
-  return (`
+  return `
   <div class="bg-gray-100 rounded-lg relative p-5 pt-8">
           <span
             class="w-8 h-8 inline-flex justify-center items-center bg-indigo-500 text-white rounded-full absolute -top-4 left-4">
@@ -31,15 +26,18 @@ const Question = (question) => {
           <h3 class="text-indigo-500 text-lg md:text-xl font-semibold mb-3">${question}</h3>
           
         </div>
-  `);
-}
+  `;
+};
 
 const useLocalStore = (key) => {
-  const store = localStorage.getItem(key) || '{}';
-  return [JSON.parse(store), (value) => localStorage.setItem(key, JSON.stringify(value))];
-}
+  const store = localStorage.getItem(key) || "{}";
+  return [
+    JSON.parse(store),
+    (value) => localStorage.setItem(key, JSON.stringify(value)),
+  ];
+};
 
-if (pathname === "/register.html") {
+if (pathName === "/register.html") {
   const form = document.querySelector("#register");
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -48,28 +46,17 @@ if (pathname === "/register.html") {
       cin: form.elements.cin.value,
       fullName: form.elements.fullName.value,
       age: form.elements.age.value,
-<<<<<<< HEAD
-    }
-=======
     };
     const candidate = new Candidate(user);
->>>>>>> a7a51c091ea97091ad7be967cd23c4d40f37c24d
 
-    const candidate = new Candidate(user);
+    // const candidate = new Candidate(user);
 
-<<<<<<< HEAD
-    const createdCandidate = await candidate.register();
-    const [, setCandidates] = useLocalStore('ucode');
-    setCandidates(createdCandidate);
-  })
-=======
     // const __user = await candidate.validate().create();
     // console.log(__user);
   });
->>>>>>> a7a51c091ea97091ad7be967cd23c4d40f37c24d
 }
 
-if (pathname === "/login.html") {
+if (pathName === "/login.html") {
   const form = document.querySelector("#login");
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -84,43 +71,18 @@ if (pathname === "/login.html") {
     const user = await candidate.login(credential);
 
     if (user instanceof Array && user.length > 0) {
-      const [, setUser] = useLocalStore('ucode');
+      const [, setUser] = useLocalStore("ucode");
       setUser(user);
     } else {
-      alert('Invalid credentials');
+      alert("Invalid credentials");
     }
-  })
+  });
 }
 
+if (pathName === "/questions.html") {
+  const questionsContainer = document.querySelector("#questionsContainer");
+  const qe = new q();
+  console.log(qe.questions);
 
-if (pathname === "/questions.html") {
-  const questionsContainer = document.querySelector('#questionsContainer');
-  // const fetcher = new Fetcher();
-  console.log(questionsContainer);
-
-  [
-    {
-      "question": "What is the name of the main character in the game?",
-      "answer": "The Wizard"
-    },
-    {
-      "question": "What is the name of the main character's pet?",
-      "answer": "The Dog"
-    },
-    {
-      "question": "What is the name of the main character's girlfriend?",
-      "answer": "The Dog"
-    },
-    {
-      "question": "What is the name of the main character's best friend?",
-      "answer": "The Wizard"
-    },
-    {
-      "question": "What is the name of the main character's best friend's best friend?",
-      "answer": "The Wizard"
-    }
-  ].map((item) => {
-    questionsContainer.insertAdjacentHTML('beforeend', Question(item.question));
-  })
-
+  // questionsContainer.insertAdjacentHTML('beforeend', Question(item.question));
 }
