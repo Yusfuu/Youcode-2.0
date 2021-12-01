@@ -52,4 +52,10 @@ if (pathname === "/login.html") {
 // }
 
 if (pathname === "/popup.html") {
+  popup(
+    "warning",
+    "login succes",
+    "ldaso;dsa;odkas;dkas;kd;askd;askd;adka;sd;as",
+    "cancel"
+  );
 }
