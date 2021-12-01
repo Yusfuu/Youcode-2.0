@@ -38,11 +38,11 @@ export class Candidate {
   }
 
 
-  // async login() {
-  //   const endpoint = `${endpoints.get.candidate}_email=${this.user?.email}&password${this.user?.password}`;
-  //   console.log(endpoint);
-  //   const data = await get(endpoint);
-  //   return data;
-  // }
+  async login() {
+    const endpoint = `${endpoints.get.candidate}email=${this.user?.email}&password=${this.user?.password}`;
+    const fetcher = new Fetcher(endpoint, 'GET');
+    const resposne = await fetcher.fetch();
+    return resposne;
+  }
 
 }

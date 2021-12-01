@@ -1,4 +1,26 @@
 {
+  "questions": [
+    {
+      "question": "What is the name of the main character in the game?",
+      "answer": "The Wizard"
+    },
+    {
+      "question": "What is the name of the main character's pet?",
+      "answer": "The Dog"
+    },
+    {
+      "question": "What is the name of the main character's girlfriend?",
+      "answer": "The Dog"
+    },
+    {
+      "question": "What is the name of the main character's best friend?",
+      "answer": "The Wizard"
+    },
+    {
+      "question": "What is the name of the main character's best friend's best friend?",
+      "answer": "The Wizard"
+    }
+  ],
   "candidate": [
     {
       "email": "youssefhajjari01@gmail.com",
@@ -10,6 +32,61 @@
       "test": false,
       "createdAt": "2021-12-01T09:37:01.120Z",
       "id": 1
+    },
+    {
+      "email": "uness@gmail.com",
+      "fullName": "uness hassoune",
+      "cin": "HH8787",
+      "age": "35",
+      "password": "cpbeblde",
+      "role": "candidate",
+      "test": false,
+      "createdAt": "2021-12-01T09:52:06.268Z",
+      "id": 2
+    },
+    {
+      "email": "holasamilol@gmail.com",
+      "fullName": "Youssef Hajjari",
+      "cin": "HH8787",
+      "age": "20",
+      "password": "di7fyycl",
+      "role": "candidate",
+      "test": false,
+      "createdAt": "2021-12-01T10:11:02.366Z",
+      "id": 3
+    },
+    {
+      "email": "youssefhajjari01@gmail.com",
+      "fullName": "Youssef Hajjari",
+      "cin": "HH8787",
+      "age": "19",
+      "password": "v2ix3lh7",
+      "role": "candidate",
+      "test": false,
+      "createdAt": "2021-12-01T10:12:18.490Z",
+      "id": 4
+    },
+    {
+      "email": "holasamilol@gmail.com",
+      "fullName": "uness hassoune",
+      "cin": "HH8787",
+      "age": "19",
+      "password": "fjrj6feo",
+      "role": "candidate",
+      "test": false,
+      "createdAt": "2021-12-01T10:12:38.567Z",
+      "id": 5
+    },
+    {
+      "email": "youssefhajjari01@gmail.com",
+      "fullName": "Youssef Hajjari",
+      "cin": "HH8787",
+      "age": "20",
+      "password": "rwzdc00t",
+      "role": "candidate",
+      "test": false,
+      "createdAt": "2021-12-01T10:13:50.153Z",
+      "id": 6
     }
   ]
 }
