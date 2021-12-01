@@ -1,12 +1,7 @@
-import { endpoints, get, post } from "../utils";
+import { endpoints } from "../endpoints";
+import { Fetcher } from "./Fetcher";
 
 export class Candidate {
-  // url = "http://localhost:5000/candidate/";
-  // data;
-  // login = async (email, password) => { };
-  // register = async (email, password) => { };
-  // logOut = () => { };
-  // getCandidateList = () => { };
 
   constructor(user) {
     this.user = user
@@ -25,26 +20,29 @@ export class Candidate {
     return this;
   }
 
-  async create() {
-    const password = Math.random().toString(36).slice(-8);
+  async register() {
     const candidate = {
       email: this.user?.email,
       fullName: this.user?.fullName,
+      cin: this.user?.cin,
       age: this.user?.age,
-      password,
-      _email: `${this.user?.fullName.replace(/\s+/, '')}_${password.substring(4)}@gmail.com`,
-      role: "candidate"
+      password: Math.random().toString(36).slice(-8),
+      role: "candidate",
+      test: false,
+      createdAt: new Date().toISOString(),
     }
-    const data = await post(endpoints.post.candidate, candidate);
-    return data;
+
+    const fetcher = new Fetcher(endpoints.post.candidate, 'POST', candidate);
+    const resposne = await fetcher.fetch();
+    return resposne;
   }
 
 
-  async login() {
-    const endpoint = `${endpoints.get.candidate}_email=${this.user?.email}&password${this.user?.password}`;
-    console.log(endpoint);
-    const data = await get(endpoint);
-    return data;
-  }
+  // async login() {
+  //   const endpoint = `${endpoints.get.candidate}_email=${this.user?.email}&password${this.user?.password}`;
+  //   console.log(endpoint);
+  //   const data = await get(endpoint);
+  //   return data;
+  // }
 
 }

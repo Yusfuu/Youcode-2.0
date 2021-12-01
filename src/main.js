@@ -9,13 +9,17 @@ if (pathname === "/register.html") {
     event.preventDefault();
     const user = {
       email: form.elements.email.value,
+      cin: form.elements.cin.value,
       fullName: form.elements.fullName.value,
       age: form.elements.age.value,
     }
     const candidate = new Candidate(user);
 
-    const __user = await candidate.validate().create();
-    console.log(__user);
+    const created = await candidate.register();
+    console.log(created);
+
+    // const __user = await candidate.validate().create();
+    // console.log(__user);
   })
 }
 

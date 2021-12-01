@@ -2,26 +2,14 @@
   "candidate": [
     {
       "email": "youssefhajjari01@gmail.com",
-      "fullName": "Youssef Hajjari",
-      "age": "20",
-      "id": 1
-    },
-    {
-      "email": "uness@gmail.com",
       "fullName": "uness hassoune",
-      "age": "20",
-      "password": "kwmnmnec",
-      "_email": "unesshassounemneb@gmail.com",
-      "id": 2
-    },
-    {
-      "email": "uness@gmail.com",
-      "fullName": "uness hassoune",
-      "age": "20",
-      "password": "ki7oekgx",
-      "_email": "unesshassoune_ekgx@gmail.com",
+      "cin": "HH8787",
+      "age": "19",
+      "password": "spljisgm",
       "role": "candidate",
-      "id": 3
+      "test": false,
+      "createdAt": "2021-12-01T09:37:01.120Z",
+      "id": 1
     }
   ]
 }
