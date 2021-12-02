@@ -7,6 +7,18 @@ import { Navbar } from "./components/Navbar";
 
 const pathname = location.pathname;
 
+document.addEventListener("readystatechange", () => {
+  // if (document.readyState === "complete") {
+  //   const [candidate, setCandidate] = useLocalStore('ucode');
+
+  //   if (candidate) {
+  //     const paths = ['/login.html', '/register.html'];
+  //     if (paths.includes(pathname)) {
+  //       location.href = '/questions.html';
+  //     }
+  //   }
+  // }
+})
 
 if (pathname === "/register.html") {
   const form = document.querySelector("#register");
@@ -23,6 +35,7 @@ if (pathname === "/register.html") {
     const [, setCandidates] = useLocalStore('ucode');
 
     setCandidates(createdCandidate);
+    location.href = "/test.html";
   })
 }
 
@@ -43,17 +56,26 @@ if (pathname === "/login.html") {
     if (user instanceof Array && user.length > 0) {
       const [, setUser] = useLocalStore("ucode");
       setUser(user);
+      location.href = "/test.html";
     } else {
       alert("Invalid credentials");
     }
   });
 }
 
-if (pathname === "/questions.html") {
+if (pathname === "/test.html") {
   document.body.insertAdjacentHTML("afterbegin", Navbar());
   const questionsContainer = document.querySelector("#questionsContainer");
   const { questions } = new Question();
+  const [candidate] = useLocalStore('ucode');
+
+  if (candidate.test) {
+    // candidate is already taken a test
+
+  }
+
   questions.then(items => {
-    items.slice(-1).map(item => questionsContainer.insertAdjacentHTML('beforeend', QuestionComponent(item.question, item.answers)))
+    items.map(item => questionsContainer.insertAdjacentHTML('beforeend', QuestionComponent(item)))
   });
+
 }

@@ -1,6 +1,7 @@
 {
   "questions": [
     {
+      "id": 1,
       "question": "What is the capital of India?",
       "answers": [
         "New Delhi",
@@ -98,7 +99,7 @@
         "Chennai",
         "Kolkata"
       ],
-      "correctAnswer": "New Delhi"
+      "correctAnswer": "Chennai"
     }
   ],
   "candidate": [
@@ -167,6 +168,41 @@
       "test": false,
       "createdAt": "2021-12-01T10:13:50.153Z",
       "id": 6
+    },
+    {
+      "email": "youssefhajjari01@gmail.com",
+      "fullName": "lkjlkjlkj",
+      "cin": "HH987987987",
+      "age": "20",
+      "password": "4f3wbl95",
+      "role": "candidate",
+      "test": false,
+      "createdAt": "2021-12-02T08:59:32.130Z",
+      "id": 7
+    },
+    {
+      "email": "youssefhajjari01@gmail.com",
+      "fullName": "lkjlkjlkj",
+      "cin": "HH987987987",
+      "age": "19",
+      "password": "hqpszmx6",
+      "role": "candidate",
+      "test": false,
+      "createdAt": "2021-12-02T09:58:50.990Z",
+      "score": 0,
+      "id": 8
+    },
+    {
+      "email": "youssefhajjari01@gmail.com",
+      "fullName": "lkjlkjlkj",
+      "cin": "HH987987987",
+      "age": "19",
+      "password": "rmspxeg4",
+      "role": "candidate",
+      "test": false,
+      "createdAt": "2021-12-02T11:09:50.423Z",
+      "score": 0,
+      "id": 9
     }
   ]
 }
