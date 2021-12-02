@@ -2,207 +2,114 @@
   "questions": [
     {
       "id": 1,
-      "question": "What is the capital of India?",
+      "question": "Which computer hardware device provides an interface for all other connected devices to communicate?",
       "answers": [
-        "New Delhi",
-        "Mumbai",
-        "Chennai",
-        "Kolkata"
+        "Motherboard",
+        "Central Processing Unit",
+        "Hard Disk Drive",
+        "Random Access Memory"
       ],
-      "correctAnswer": "New Delhi"
+      "correctAnswer": "Motherboard"
     },
     {
-      "question": "What is the capital of USA?",
+      "id": 2,
+      "question": "In CSS, which of these values CANNOT be used with the position property?",
       "answers": [
-        "New Delhi",
-        "Mumbai",
-        "Chennai",
-        "Kolkata"
+        "static",
+        "absolute",
+        "relative",
+        "center"
       ],
-      "correctAnswer": "New Delhi"
+      "correctAnswer": "center"
     },
     {
-      "question": "What is the capital of UK?",
+      "id": 3,
+      "question": "This mobile OS held the largest market share in 2012",
       "answers": [
-        "New Delhi",
-        "Mumbai",
-        "Chennai",
-        "Kolkata"
+        "Android",
+        "BlackBerry",
+        "Symbian",
+        "IOS"
       ],
-      "correctAnswer": "New Delhi"
+      "correctAnswer": "IOS"
     },
     {
-      "question": "What is the capital of Australia?",
+      "id": 4,
+      "question": "Which programming language shares its name with an island in Indonesia?",
       "answers": [
-        "New Delhi",
-        "Mumbai",
-        "Chennai",
-        "Kolkata"
+        "Python",
+        "C",
+        "Jakarta",
+        "Java"
       ],
-      "correctAnswer": "New Delhi"
+      "correctAnswer": "Java"
     },
     {
-      "question": "What is the capital of Canada?",
+      "id": 5,
+      "question": "What was the first commerically available computer processor?",
       "answers": [
-        "New Delhi",
-        "Mumbai",
-        "Chennai",
-        "Kolkata"
+        "Intel 486SX",
+        "TMS 1000",
+        "AMD AM386",
+        "Intel 4004"
       ],
-      "correctAnswer": "New Delhi"
+      "correctAnswer": "Intel 4004"
     },
     {
-      "question": "What is the capital of Germany?",
+      "id": 6,
+      "question": "What major programming language does Unreal Engine 4 use?",
       "answers": [
-        "New Delhi",
-        "Mumbai",
-        "Chennai",
-        "Kolkata"
+        "Assembly",
+        "C#",
+        "ECMAScript",
+        "C++"
       ],
-      "correctAnswer": "New Delhi"
+      "correctAnswer": "C++"
     },
     {
-      "question": "What is the capital of Italy?",
+      "id": 7,
+      "question": "When Gmail first launched, how much storage did it provide for your email?",
       "answers": [
-        "New Delhi",
-        "Mumbai",
-        "Chennai",
-        "Kolkata"
+        "512MB",
+        "5GB",
+        "Unlimited",
+        "1GB"
       ],
-      "correctAnswer": "New Delhi"
+      "correctAnswer": "1GB"
     },
     {
-      "question": "What is the capital of Japan?",
+      "id": 8,
+      "question": "What does CPU stand for?",
       "answers": [
-        "New Delhi",
-        "Mumbai",
-        "Chennai",
-        "Kolkata"
+        "Central Process Unit",
+        "Computer Personal Unit",
+        "Central Processor Unit",
+        "Central Processing Unit"
       ],
-      "correctAnswer": "New Delhi"
+      "correctAnswer": "Central Processing Unit"
     },
     {
-      "question": "What is the capital of China?",
+      "id": 9,
+      "question": "In the server hosting industry IaaS stands for...",
       "answers": [
-        "New Delhi",
-        "Mumbai",
-        "Chennai",
-        "Kolkata"
+        "Internet as a Service",
+        "Internet and a Server",
+        "Infrastructure as a Server",
+        "Infrastructure as a Service"
       ],
-      "correctAnswer": "New Delhi"
+      "correctAnswer": "Infrastructure as a Service"
     },
     {
-      "question": "What is the capital of Russia?",
+      "id": 10,
+      "question": "Who is the founder of Palantir?",
       "answers": [
-        "New Delhi",
-        "Mumbai",
-        "Chennai",
-        "Kolkata"
+        "Mark Zuckerberg",
+        "Marc Benioff",
+        "Jack Dorsey",
+        "Peter Thiel"
       ],
-      "correctAnswer": "Chennai"
+      "correctAnswer": "Peter Thiel"
     }
   ],
-  "candidate": [
-    {
-      "email": "youssefhajjari01@gmail.com",
-      "fullName": "uness hassoune",
-      "cin": "HH8787",
-      "age": "19",
-      "password": "spljisgm",
-      "role": "candidate",
-      "test": false,
-      "createdAt": "2021-12-01T09:37:01.120Z",
-      "id": 1
-    },
-    {
-      "email": "uness@gmail.com",
-      "fullName": "uness hassoune",
-      "cin": "HH8787",
-      "age": "35",
-      "password": "cpbeblde",
-      "role": "candidate",
-      "test": false,
-      "createdAt": "2021-12-01T09:52:06.268Z",
-      "id": 2
-    },
-    {
-      "email": "holasamilol@gmail.com",
-      "fullName": "Youssef Hajjari",
-      "cin": "HH8787",
-      "age": "20",
-      "password": "di7fyycl",
-      "role": "candidate",
-      "test": false,
-      "createdAt": "2021-12-01T10:11:02.366Z",
-      "id": 3
-    },
-    {
-      "email": "youssefhajjari01@gmail.com",
-      "fullName": "Youssef Hajjari",
-      "cin": "HH8787",
-      "age": "19",
-      "password": "v2ix3lh7",
-      "role": "candidate",
-      "test": false,
-      "createdAt": "2021-12-01T10:12:18.490Z",
-      "id": 4
-    },
-    {
-      "email": "holasamilol@gmail.com",
-      "fullName": "uness hassoune",
-      "cin": "HH8787",
-      "age": "19",
-      "password": "fjrj6feo",
-      "role": "candidate",
-      "test": false,
-      "createdAt": "2021-12-01T10:12:38.567Z",
-      "id": 5
-    },
-    {
-      "email": "youssefhajjari01@gmail.com",
-      "fullName": "Youssef Hajjari",
-      "cin": "HH8787",
-      "age": "20",
-      "password": "rwzdc00t",
-      "role": "candidate",
-      "test": false,
-      "createdAt": "2021-12-01T10:13:50.153Z",
-      "id": 6
-    },
-    {
-      "email": "youssefhajjari01@gmail.com",
-      "fullName": "lkjlkjlkj",
-      "cin": "HH987987987",
-      "age": "20",
-      "password": "4f3wbl95",
-      "role": "candidate",
-      "test": false,
-      "createdAt": "2021-12-02T08:59:32.130Z",
-      "id": 7
-    },
-    {
-      "email": "youssefhajjari01@gmail.com",
-      "fullName": "lkjlkjlkj",
-      "cin": "HH987987987",
-      "age": "19",
-      "password": "hqpszmx6",
-      "role": "candidate",
-      "test": false,
-      "createdAt": "2021-12-02T09:58:50.990Z",
-      "score": 0,
-      "id": 8
-    },
-    {
-      "email": "youssefhajjari01@gmail.com",
-      "fullName": "lkjlkjlkj",
-      "cin": "HH987987987",
-      "age": "19",
-      "password": "rmspxeg4",
-      "role": "candidate",
-      "test": false,
-      "createdAt": "2021-12-02T11:09:50.423Z",
-      "score": 0,
-      "id": 9
-    }
-  ]
+  "candidate": []
 }

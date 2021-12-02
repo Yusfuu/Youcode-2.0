@@ -30,11 +30,20 @@ export class Candidate {
       role: "candidate",
       test: false,
       createdAt: new Date().toISOString(),
-      score: 0
+      score: 0,
+      testOnline: false,
+      seriousGame: {
+        status: false,
+        answer: null
+      },
+      motivationGame: {
+        status: false,
+        answer: null
+      }
     }
 
     const fetcher = new Fetcher(endpoints.post.candidate, 'POST', candidate);
-    const resposne = await fetcher.fetch();
+    const resposne = await fetcher.fetche();
     return resposne;
   }
 
@@ -42,7 +51,7 @@ export class Candidate {
   async login() {
     const endpoint = `${endpoints.get.candidate}email=${this.user?.email}&password=${this.user?.password}`;
     const fetcher = new Fetcher(endpoint, 'GET');
-    const resposne = await fetcher.fetch();
+    const resposne = await fetcher.fetche();
     return resposne.at(0);
   }
 

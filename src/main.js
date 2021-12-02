@@ -4,6 +4,7 @@ import { useLocalStore } from "./helpers/useLocalStore";
 import { Question } from "./classes/Question";
 import { QuestionComponent } from "./components/index";
 import { Navbar } from "./components/Navbar";
+import { popup } from "./helpers/popup";
 
 const pathname = location.pathname;
 
@@ -29,10 +30,10 @@ if (pathname === "/register.html") {
       cin: form.elements.cin.value,
       fullName: form.elements.fullName.value,
       age: form.elements.age.value,
-    }
+    };
     const candidate = new Candidate(user);
     const createdCandidate = await candidate.register();
-    const [, setCandidates] = useLocalStore('ucode');
+    const [, setCandidates] = useLocalStore("ucode");
 
     setCandidates(createdCandidate);
     location.href = "/test.html";
@@ -71,7 +72,6 @@ if (pathname === "/test.html") {
 
   if (candidate.test) {
     // candidate is already taken a test
-
   }
 
   questions.then(items => {

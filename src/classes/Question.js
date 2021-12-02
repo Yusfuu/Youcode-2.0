@@ -6,7 +6,7 @@ export class Question {
   }
   async getQuestions() {
     const fetcher = new Fetcher(endpoints.get.questions, "GET");
-    const resposne = await fetcher.fetch();
+    const resposne = await fetcher.fetche();
     return resposne;
   }
 }

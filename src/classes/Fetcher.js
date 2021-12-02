@@ -5,7 +5,7 @@ export class Fetcher {
     this.body = body;
   }
 
-  async fetch(callback = () => {}) {
+  async fetche(callback = () => { }) {
     const config = {
       method: this.method,
       headers: {
@@ -14,7 +14,7 @@ export class Fetcher {
       ...(this.body && { body: JSON.stringify(this.body) }),
     };
     const response = await fetch(this.url, config);
-    return await response.json();
+    const data = await response.json();
     callback(data);
     return data;
   }
