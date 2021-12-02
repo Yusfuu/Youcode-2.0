@@ -1,4 +1,9 @@
-export const Question = (question) => {
+export const QuestionComponent = (question, answers) => {
+
+  const answersHtml = answers.map(answer => {
+    return `<button class="bg-blue-500 shadow-md  max-w-xl transition-all text-white font-semibold py-2 px-4 rounded-md">${answer}</button>`;
+  }).join('');
+
   return (`
   <div class="bg-gray-100 rounded-lg relative p-5 pt-8">
           <span
@@ -10,8 +15,12 @@ export const Question = (question) => {
             </svg>
           </span>
 
-          <h3 class="text-indigo-500 text-lg md:text-xl font-semibold mb-3">${question}</h3>
-          
-        </div>
-  `);
+          <h3 class="text-indigo-500 text-lg md:text-xl font-semibold mb-7 text-center">${question}</h3>
+          <div class="flex gap-5 justify-center items-center flex-col">
+          ${answersHtml}
+          </div>
+`);
 }
+
+
+

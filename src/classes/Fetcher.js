@@ -5,18 +5,17 @@ export class Fetcher {
     this.body = body;
   }
 
-  async fetch(callback = () => { }) {
+  async fetch(callback = () => {}) {
     const config = {
       method: this.method,
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
-      ...(this.body) && { body: JSON.stringify(this.body) },
+      ...(this.body && { body: JSON.stringify(this.body) }),
     };
     const response = await fetch(this.url, config);
-    const data = await response.json();
+    return await response.json();
     callback(data);
     return data;
   }
-
 }

@@ -1,24 +1,104 @@
 {
   "questions": [
     {
-      "question": "What is the name of the main character in the game?",
-      "answer": "The Wizard"
+      "question": "What is the capital of India?",
+      "answers": [
+        "New Delhi",
+        "Mumbai",
+        "Chennai",
+        "Kolkata"
+      ],
+      "correctAnswer": "New Delhi"
     },
     {
-      "question": "What is the name of the main character's pet?",
-      "answer": "The Dog"
+      "question": "What is the capital of USA?",
+      "answers": [
+        "New Delhi",
+        "Mumbai",
+        "Chennai",
+        "Kolkata"
+      ],
+      "correctAnswer": "New Delhi"
     },
     {
-      "question": "What is the name of the main character's girlfriend?",
-      "answer": "The Dog"
+      "question": "What is the capital of UK?",
+      "answers": [
+        "New Delhi",
+        "Mumbai",
+        "Chennai",
+        "Kolkata"
+      ],
+      "correctAnswer": "New Delhi"
     },
     {
-      "question": "What is the name of the main character's best friend?",
-      "answer": "The Wizard"
+      "question": "What is the capital of Australia?",
+      "answers": [
+        "New Delhi",
+        "Mumbai",
+        "Chennai",
+        "Kolkata"
+      ],
+      "correctAnswer": "New Delhi"
     },
     {
-      "question": "What is the name of the main character's best friend's best friend?",
-      "answer": "The Wizard"
+      "question": "What is the capital of Canada?",
+      "answers": [
+        "New Delhi",
+        "Mumbai",
+        "Chennai",
+        "Kolkata"
+      ],
+      "correctAnswer": "New Delhi"
+    },
+    {
+      "question": "What is the capital of Germany?",
+      "answers": [
+        "New Delhi",
+        "Mumbai",
+        "Chennai",
+        "Kolkata"
+      ],
+      "correctAnswer": "New Delhi"
+    },
+    {
+      "question": "What is the capital of Italy?",
+      "answers": [
+        "New Delhi",
+        "Mumbai",
+        "Chennai",
+        "Kolkata"
+      ],
+      "correctAnswer": "New Delhi"
+    },
+    {
+      "question": "What is the capital of Japan?",
+      "answers": [
+        "New Delhi",
+        "Mumbai",
+        "Chennai",
+        "Kolkata"
+      ],
+      "correctAnswer": "New Delhi"
+    },
+    {
+      "question": "What is the capital of China?",
+      "answers": [
+        "New Delhi",
+        "Mumbai",
+        "Chennai",
+        "Kolkata"
+      ],
+      "correctAnswer": "New Delhi"
+    },
+    {
+      "question": "What is the capital of Russia?",
+      "answers": [
+        "New Delhi",
+        "Mumbai",
+        "Chennai",
+        "Kolkata"
+      ],
+      "correctAnswer": "New Delhi"
     }
   ],
   "candidate": [
