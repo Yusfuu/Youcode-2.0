@@ -4,9 +4,9 @@ import { useLocalStore } from "./helpers/useLocalStore";
 import { Question } from "./classes/Question";
 import { QuestionComponent } from "./components/index";
 import { Navbar } from "./components/Navbar";
+import { popup } from "./helpers/popup";
 
 const pathname = location.pathname;
-
 
 if (pathname === "/register.html") {
   const form = document.querySelector("#register");
@@ -17,13 +17,13 @@ if (pathname === "/register.html") {
       cin: form.elements.cin.value,
       fullName: form.elements.fullName.value,
       age: form.elements.age.value,
-    }
+    };
     const candidate = new Candidate(user);
     const createdCandidate = await candidate.register();
-    const [, setCandidates] = useLocalStore('ucode');
+    const [, setCandidates] = useLocalStore("ucode");
 
     setCandidates(createdCandidate);
-  })
+  });
 }
 
 if (pathname === "/login.html") {
@@ -53,7 +53,19 @@ if (pathname === "/questions.html") {
   document.body.insertAdjacentHTML("afterbegin", Navbar());
   const questionsContainer = document.querySelector("#questionsContainer");
   const { questions } = new Question();
-  questions.then(items => {
-    items.slice(-1).map(item => questionsContainer.insertAdjacentHTML('beforeend', QuestionComponent(item.question, item.answers)))
+  questions.then((items) => {
+    items
+      .slice(-1)
+      .map((item) =>
+        questionsContainer.insertAdjacentHTML(
+          "beforeend",
+          QuestionComponent(item.question, item.answers)
+        )
+      );
   });
 }
+
+// if (pathname === "/popup.html") {
+//   popup("sucess", "", "", "");
+//   popup("warning", "", "", "");
+// }
