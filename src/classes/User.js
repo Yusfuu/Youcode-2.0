@@ -42,6 +42,10 @@ export class Candidate {
         status: false,
         answer: null
       },
+      administratorTest: {
+        status: false,
+        answer: null
+      },
       _test: {
         testOnline: false,
         motivationGame: false,
