@@ -2,9 +2,10 @@ import "./style.css";
 import { Candidate } from "./classes/User";
 import { useLocalStore } from "./helpers/useLocalStore";
 import { Question } from "./classes/Question";
-import { QuestionComponent } from "./components/index";
 import { Navbar } from "./components/Navbar";
-import { popup } from "./helpers/popup";
+import { QuestionComponent } from "./components/Question";
+import { BetterCallComponent } from "./components/Lose";
+import { next } from "./helpers/next";
 
 const pathname = location.pathname;
 
@@ -70,10 +71,21 @@ if (pathname === "/test.html") {
   const { questions } = new Question();
   const [candidate] = useLocalStore('ucode');
 
-  if (candidate.test) {
-    // candidate is already taken a test
-  }
+  console.log(candidate._test);
 
+  // const x = Object.values(candidate._test).filter(Boolean).forEach(() => next());
+
+  // if (candidate.isFailed) {
+  //   document.querySelector("#questionsContainer").innerHTML = BetterCallComponent();
+  // } else {
+  //   if (candidate.test) {
+  //     // candidate is already taken a test
+  //   }
+
+  //   questions.then(items => {
+  //     items.map(item => questionsContainer.insertAdjacentHTML('beforeend', QuestionComponent(item)))
+  //   });
+  // }
   questions.then(items => {
     items.map(item => questionsContainer.insertAdjacentHTML('beforeend', QuestionComponent(item)))
   });

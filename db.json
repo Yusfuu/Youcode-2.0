@@ -111,5 +111,57 @@
       "correctAnswer": "Peter Thiel"
     }
   ],
-  "candidate": []
+  "candidate": [
+    {
+      "email": "youssefhajjari01@gmail.com",
+      "fullName": "Youssef Hajjari",
+      "cin": "HH8765",
+      "age": "21",
+      "password": "ladub12n",
+      "role": "candidate",
+      "test": false,
+      "createdAt": "2021-12-02T19:41:13.752Z",
+      "score": 0,
+      "testOnline": false,
+      "seriousGame": {
+        "status": false,
+        "answer": null
+      },
+      "motivationGame": {
+        "status": false,
+        "answer": null
+      },
+      "id": 1
+    },
+    {
+      "email": "youssefhajjari01@gmail.com",
+      "fullName": "Youssef Hajjari",
+      "cin": "HH8765",
+      "age": "20",
+      "password": "nfhf1dqi",
+      "role": "candidate",
+      "createdAt": "2021-12-02T20:03:28.534Z",
+      "isFailed": false,
+      "testOnline": {
+        "status": false,
+        "points": 0
+      },
+      "seriousGame": {
+        "status": false,
+        "answer": null
+      },
+      "motivationGame": {
+        "status": false,
+        "answer": null
+      },
+      "_test": {
+        "testOnline": false,
+        "motivationGame": false,
+        "seriousGame": false,
+        "administratorTest": false,
+        "technicalTest": false
+      },
+      "id": 2
+    }
+  ]
 }

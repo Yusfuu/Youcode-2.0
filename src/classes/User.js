@@ -28,10 +28,12 @@ export class Candidate {
       age: this.user?.age,
       password: Math.random().toString(36).slice(-8),
       role: "candidate",
-      test: false,
       createdAt: new Date().toISOString(),
-      score: 0,
-      testOnline: false,
+      isFailed: false,
+      testOnline: {
+        status: false,
+        points: 0
+      },
       seriousGame: {
         status: false,
         answer: null
@@ -39,6 +41,13 @@ export class Candidate {
       motivationGame: {
         status: false,
         answer: null
+      },
+      _test: {
+        testOnline: false,
+        motivationGame: false,
+        seriousGame: false,
+        administratorTest: false,
+        technicalTest: false
       }
     }
 
