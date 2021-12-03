@@ -1,9 +1,7 @@
 import "./style.css";
 import { Candidate } from "./classes/User";
 import { useLocalStore } from "./helpers/useLocalStore";
-import { Question } from "./classes/Question";
 import { Navbar } from "./components/Navbar";
-import { QuestionComponent } from "./components/Question";
 import { BetterCallComponent } from "./components/Lose";
 import { next } from "./helpers/next";
 import { Start } from "./components/Start";
@@ -11,17 +9,24 @@ import { Start } from "./components/Start";
 const pathname = location.pathname;
 
 document.addEventListener("readystatechange", () => {
-  // if (document.readyState === "complete") {
-  //   const [candidate, setCandidate] = useLocalStore('ucode');
+  if (document.readyState === "complete") {
+    const [candidate] = useLocalStore('ucode');
+    const paths = ['/login.html', '/register.html'];
 
-  //   if (candidate) {
-  //     const paths = ['/login.html', '/register.html'];
-  //     if (paths.includes(pathname)) {
-  //       location.href = '/questions.html';
-  //     }
-  //   }
-  // }
-})
+    if (pathname === "/test.html") {
+      if (!!!Object.keys(candidate || {}).length) {
+        location.href = '/register.html';
+      }
+    }
+
+    if (pathname === "/register.html" || pathname === "/login.html") {
+      if (!!Object.keys(candidate || {}).length) {
+        location.href = '/test.html';
+      }
+    }
+
+  }
+});
 
 if (pathname === "/register.html") {
   const form = document.querySelector("#register");
@@ -71,13 +76,13 @@ if (pathname === "/test.html") {
   const _test = document.querySelector("#_test");
   const [candidate] = useLocalStore('ucode');
 
-  if (!candidate._test.start) {
+  if (!candidate?._test?.start) {
     _test.innerHTML = Start();
   }
   if (candidate.isFailed) {
     document.querySelector("#_test").innerHTML = BetterCallComponent();
   } else {
-    if (!candidate._test.testOnline) {
+    if (!candidate?._test?.testOnline) {
       // questions.then(items => {
       //   items.map(item => _test.insertAdjacentHTML('beforeend', QuestionComponent(item)))
       // });

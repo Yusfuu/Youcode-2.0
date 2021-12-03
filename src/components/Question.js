@@ -21,6 +21,14 @@ const SingleQuestion = (question) => {
 
     const [candidate, setCandidate] = useLocalStore('ucode');
 
+    const data = JSON.parse(event.target.dataset.question);
+    const answer = (event.target.dataset.answer);
+
+    if (data.correctAnswer === answer) {
+      candidate.testOnline.points += 1;
+      setCandidate(candidate);
+    }
+
     if (questionCount === 5) {
 
       candidate.testOnline.status = true;
@@ -39,14 +47,6 @@ const SingleQuestion = (question) => {
       setCandidate(candidate);
       return;
     };
-
-    const data = JSON.parse(event.target.dataset.question);
-    const answer = (event.target.dataset.answer);
-
-    if (data.correctAnswer === answer) {
-      candidate.testOnline.points += 1;
-      setCandidate(candidate);
-    }
 
     const children = [...document.querySelector("#_test").children];
     children.forEach((child) => child.classList.add('hidden'));
