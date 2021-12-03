@@ -1,5 +1,21 @@
+import ConfettiGenerator from "confetti-js";
+import { useLocalStore } from "../helpers/useLocalStore";
+
 export const Done = () => {
+  const [user,] = useLocalStore('ucode');
+
+  setTimeout(() => {
+    if (user?.winner) {
+      var confettiSettings = { target: 'my-canvas' };
+      var confetti = new ConfettiGenerator(confettiSettings);
+      confetti.render();
+    }
+  }, 5000);
+
+  console.log("azaz");
   return (`
+  <canvas id="my-canvas"></canvas>
+
   <div class="bg-white py-6 sm:py-8 lg:py-12">
   <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
     <div class="md:h-80 flex flex-col sm:flex-row bg-gray-200 rounded-lg overflow-hidden">
