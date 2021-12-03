@@ -83,10 +83,14 @@ const SingleQuestion = (question) => {
 
 export const QuestionComponent = async () => {
   const { questions } = new Question();
-  let _test = document.querySelector("#_test")
-  _test.insertAdjacentHTML('beforebegin', QuestionCount());
-  questions.then(items => {
-    items.map(item => _test.insertAdjacentHTML('beforeend', SingleQuestion(item)))
-  });
+  let _test = document.querySelector("#_test");
+  const [candidate, setCandidate] = useLocalStore('ucode');
+
+  if (!candidate._test.testOnline) {
+    _test.insertAdjacentHTML('beforebegin', QuestionCount());
+    questions.then(items => {
+      items.map(item => _test.insertAdjacentHTML('beforeend', SingleQuestion(item)))
+    });
+  }
   return null;
 }

@@ -71,17 +71,18 @@ if (pathname === "/test.html") {
   const _test = document.querySelector("#_test");
   const [candidate] = useLocalStore('ucode');
 
-  // if (candidate.isFailed) {
-  //   document.querySelector("#_test").innerHTML = BetterCallComponent();
-  // } else {
-  //   if (!candidate._test.testOnline) {
-  //     questions.then(items => {
-  //       items.map(item => _test.insertAdjacentHTML('beforeend', QuestionComponent(item)))
-  //     });
-  //   } else {
-  //     Object.values(candidate._test).filter(Boolean).forEach(() => next());
-  //   }
-  // }
-  _test.innerHTML = Start();
-
+  if (!candidate._test.start) {
+    _test.innerHTML = Start();
+  }
+  if (candidate.isFailed) {
+    document.querySelector("#_test").innerHTML = BetterCallComponent();
+  } else {
+    if (!candidate._test.testOnline) {
+      // questions.then(items => {
+      //   items.map(item => _test.insertAdjacentHTML('beforeend', QuestionComponent(item)))
+      // });
+    } else {
+      Object.values(candidate._test).filter(Boolean).forEach(() => next());
+    }
+  }
 }

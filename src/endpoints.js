@@ -7,5 +7,7 @@ export const endpoints = {
     candidate: "http://localhost:5000/candidate",
   },
   put: {},
-  delete: {},
+  patch: {
+    candidate: "http://localhost:5000/candidate",
+  },
 };

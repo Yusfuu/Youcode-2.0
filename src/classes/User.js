@@ -73,4 +73,10 @@ export class Candidate {
     return resposne.at(0);
   }
 
+  async updateCandidate() {
+    const endpoint = `${endpoints.patch.candidate}/${this.user.id}`
+    const fetcher = new Fetcher(endpoint, 'PATCH', this.user);
+    const resposne = await fetcher.fetche();
+  }
+
 }

@@ -1,11 +1,19 @@
+import { Candidate } from "../classes/User";
+import { next } from "../helpers/next";
+import { useLocalStore } from "../helpers/useLocalStore";
+
 export const Technical = () => {
-  const TechSubmit = () => {
+  const TechSubmit = async () => {
     const value = document.querySelector('#tech').value;
     const [candidate, setCandidate] = useLocalStore('ucode');
     candidate.technicalTest.status = true;
     candidate.technicalTest.answer = value;
     candidate._test.technicalTest = true;
     setCandidate(candidate);
+
+    const user = new Candidate(candidate);
+    user.updateCandidate();
+    next();
   }
   window.TechSubmit = TechSubmit;
 

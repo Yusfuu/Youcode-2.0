@@ -3,7 +3,7 @@ export const BetterCallComponent = () => {
     child.classList.remove('bg-green-500', 'bg-gray-500', 'bg-gray-900');
     child.classList.add('bg-red-500')
   });
-  document.querySelector('#QuestionCount').remove();
+  document.querySelector('#QuestionCount')?.remove();
 
   return `
 <div class="bg-white py-6 sm:py-8 lg:py-12">
