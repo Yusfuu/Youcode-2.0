@@ -360,6 +360,45 @@
         "technicalTest": false
       },
       "id": 6
+    },
+    {
+      "email": "youssefhajjari01@gmail.com",
+      "fullName": "Youssef Hajjari",
+      "cin": "HH8765",
+      "age": "20",
+      "password": "cgc1mcwq",
+      "role": "candidate",
+      "createdAt": "2021-12-03T16:07:51.921Z",
+      "isFailed": false,
+      "testOnline": {
+        "status": false,
+        "points": 0
+      },
+      "seriousGame": {
+        "status": false,
+        "answer": null
+      },
+      "motivationGame": {
+        "status": false,
+        "answer": null
+      },
+      "administratorTest": {
+        "status": false,
+        "answer": null
+      },
+      "technicalTest": {
+        "status": false,
+        "answer": null
+      },
+      "_test": {
+        "start": false,
+        "testOnline": false,
+        "motivationGame": false,
+        "seriousGame": false,
+        "administratorTest": false,
+        "technicalTest": false
+      },
+      "id": 7
     }
   ]
 }

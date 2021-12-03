@@ -2,17 +2,21 @@ import { endpoints } from "../endpoints";
 import { Fetcher } from "./Fetcher";
 
 export class Candidate {
-
   constructor(user) {
-    this.user = user
+    this.user = user;
   }
 
   validate() {
-    if (this.user?.email.trim() === "" || this.user?.fullName.trim() === "" || this.user?.age.trim() === "") {
+    if (
+      this.user?.email.trim() === "" ||
+      this.user?.fullName.trim() === "" ||
+      this.user?.age.trim() === ""
+    ) {
       throw new Error("Please fill all fields");
     }
 
-    const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const emailRegex =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     if (!emailRegex.test(this.user?.email)) {
       throw new Error("Email is not valid");
@@ -32,19 +36,19 @@ export class Candidate {
       isFailed: false,
       testOnline: {
         status: false,
-        points: 0
+        points: 0,
       },
       seriousGame: {
         status: false,
-        answer: null
+        answer: null,
       },
       motivationGame: {
         status: false,
-        answer: null
+        answer: null,
       },
       administratorTest: {
         status: false,
-        answer: null
+        answer: null,
       },
       technicalTest: {
         status: false,
@@ -56,19 +60,18 @@ export class Candidate {
         motivationGame: false,
         seriousGame: false,
         administratorTest: false,
-        technicalTest: false
-      }
-    }
+        technicalTest: false,
+      },
+    };
 
-    const fetcher = new Fetcher(endpoints.post.candidate, 'POST', candidate);
+    const fetcher = new Fetcher(endpoints.post.candidate, "POST", candidate);
     const resposne = await fetcher.fetche();
     return resposne;
   }
 
-
   async login() {
     const endpoint = `${endpoints.get.candidate}email=${this.user?.email}&password=${this.user?.password}`;
-    const fetcher = new Fetcher(endpoint, 'GET');
+    const fetcher = new Fetcher(endpoint, "GET");
     const resposne = await fetcher.fetche();
     return resposne.at(0);
   }
