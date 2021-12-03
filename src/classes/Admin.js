@@ -11,7 +11,6 @@ export class Admin {
   }
   generatTxt(data) {
     const txt = `
-
                   ▀▄▀▄▀▄ PERSONAL INFORMATIONS ▄▀▄▀▄▀
 
                 
@@ -20,9 +19,6 @@ export class Admin {
     CIN       : ${data.cin}
     CREATED_AT: ${data.createdAt.split("T")[0]}
 
-                  
-                          ♥♥ ONLINE TEST ♥♥
-                          =================
                           
                           ♥♥ SERIOUS GAME ♥♥
                           ==================
@@ -38,12 +34,16 @@ export class Admin {
                           ♥♥ ADMINSTRATION TEST ♥♥
                           ========================
 
-    ${data.seriousGame.answer}
+    ${data.administratorTest.answer
+      .map((e) => {
+        return `question: ${e.question}\n answer: ${e.answer}\n`;
+      })
+      .join("")}
               
                           ♥♥ TECHNICAL TEST ♥♥
                           ====================
 
-    ${data.seriousGame.answer}
+    ${data.technicalTest.answer}
     
     `;
 
