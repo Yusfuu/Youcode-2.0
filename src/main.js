@@ -6,13 +6,13 @@ import { Navbar } from "./components/Navbar";
 import { QuestionComponent } from "./components/Question";
 import { BetterCallComponent } from "./components/Lose";
 import { next } from "./helpers/next";
+import { popup } from "./helpers/popup";
 
 const pathname = location.pathname;
 
 document.addEventListener("readystatechange", () => {
   // if (document.readyState === "complete") {
   //   const [candidate, setCandidate] = useLocalStore('ucode');
-
   //   if (candidate) {
   //     const paths = ['/login.html', '/register.html'];
   //     if (paths.includes(pathname)) {
@@ -20,7 +20,7 @@ document.addEventListener("readystatechange", () => {
   //     }
   //   }
   // }
-})
+});
 
 if (pathname === "/register.html") {
   const form = document.querySelector("#register");
@@ -33,34 +33,41 @@ if (pathname === "/register.html") {
       age: form.elements.age.value,
     };
     const candidate = new Candidate(user);
+    try {
+      candidate.validate();
+    } catch (error) {
+      popup("warning", "register Incorect", "", "try again");
+    }
     const createdCandidate = await candidate.register();
-    const [, setCandidates] = useLocalStore("ucode");
-
+    const [_, setCandidates] = useLocalStore("ucode");
     setCandidates(createdCandidate);
-    location.href = "/test.html";
-  })
+    location.href = "/login.html";
+  });
 }
 
 if (pathname === "/login.html") {
   const form = document.querySelector("#login");
+  const [_] = useLocalStore("ucode");
+  if (_) {
+    console.log(_.email, _.password);
+    form.elements.email.value = _.email;
+    form.elements.password.value = _.password;
+  }
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
-
     const credential = {
       email: form.elements.email.value,
       password: form.elements.password.value,
     };
 
     const candidate = new Candidate(credential);
-
     const user = await candidate.login(credential);
-
-    if (user instanceof Array && user.length > 0) {
+    if (user) {
       const [, setUser] = useLocalStore("ucode");
       setUser(user);
       location.href = "/test.html";
     } else {
-      alert("Invalid credentials");
+      popup("warning", "Login Incorect", "", "try again");
     }
   });
 }
@@ -69,11 +76,13 @@ if (pathname === "/test.html") {
   document.body.insertAdjacentHTML("afterbegin", Navbar());
   const questionsContainer = document.querySelector("#questionsContainer");
   const { questions } = new Question();
-  const [candidate] = useLocalStore('ucode');
+  const [candidate] = useLocalStore("ucode");
 
   console.log(candidate._test);
 
-  // const x = Object.values(candidate._test).filter(Boolean).forEach(() => next());
+  const x = Object.values(candidate._test)
+    .filter(Boolean)
+    .forEach(() => next());
 
   // if (candidate.isFailed) {
   //   document.querySelector("#questionsContainer").innerHTML = BetterCallComponent();
@@ -86,8 +95,12 @@ if (pathname === "/test.html") {
   //     items.map(item => questionsContainer.insertAdjacentHTML('beforeend', QuestionComponent(item)))
   //   });
   // }
-  questions.then(items => {
-    items.map(item => questionsContainer.insertAdjacentHTML('beforeend', QuestionComponent(item)))
+  questions.then((items) => {
+    items.map((item) =>
+      questionsContainer.insertAdjacentHTML(
+        "beforeend",
+        QuestionComponent(item)
+      )
+    );
   });
-
 }
