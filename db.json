@@ -14,67 +14,37 @@
     {
       "id": 2,
       "question": "In CSS, which of these values CANNOT be used with the position property?",
-      "answers": [
-        "static",
-        "absolute",
-        "relative",
-        "center"
-      ],
+      "answers": ["static", "absolute", "relative", "center"],
       "correctAnswer": "center"
     },
     {
       "id": 3,
       "question": "This mobile OS held the largest market share in 2012",
-      "answers": [
-        "Android",
-        "BlackBerry",
-        "Symbian",
-        "IOS"
-      ],
+      "answers": ["Android", "BlackBerry", "Symbian", "IOS"],
       "correctAnswer": "IOS"
     },
     {
       "id": 4,
       "question": "Which programming language shares its name with an island in Indonesia?",
-      "answers": [
-        "Python",
-        "C",
-        "Jakarta",
-        "Java"
-      ],
+      "answers": ["Python", "C", "Jakarta", "Java"],
       "correctAnswer": "Java"
     },
     {
       "id": 5,
       "question": "What was the first commerically available computer processor?",
-      "answers": [
-        "Intel 486SX",
-        "TMS 1000",
-        "AMD AM386",
-        "Intel 4004"
-      ],
+      "answers": ["Intel 486SX", "TMS 1000", "AMD AM386", "Intel 4004"],
       "correctAnswer": "Intel 4004"
     },
     {
       "id": 6,
       "question": "What major programming language does Unreal Engine 4 use?",
-      "answers": [
-        "Assembly",
-        "C#",
-        "ECMAScript",
-        "C++"
-      ],
+      "answers": ["Assembly", "C#", "ECMAScript", "C++"],
       "correctAnswer": "C++"
     },
     {
       "id": 7,
       "question": "When Gmail first launched, how much storage did it provide for your email?",
-      "answers": [
-        "512MB",
-        "5GB",
-        "Unlimited",
-        "1GB"
-      ],
+      "answers": ["512MB", "5GB", "Unlimited", "1GB"],
       "correctAnswer": "1GB"
     },
     {
@@ -118,7 +88,7 @@
       "cin": "HH8765",
       "age": "21",
       "password": "ladub12n",
-      "role": "candidate",
+      "role": "admin",
       "test": false,
       "createdAt": "2021-12-02T19:41:13.752Z",
       "score": 0,
