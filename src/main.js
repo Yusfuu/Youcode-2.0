@@ -6,6 +6,7 @@ import { Navbar } from "./components/Navbar";
 import { QuestionComponent } from "./components/Question";
 import { BetterCallComponent } from "./components/Lose";
 import { next } from "./helpers/next";
+import { Start } from "./components/Start";
 
 const pathname = location.pathname;
 
@@ -67,27 +68,20 @@ if (pathname === "/login.html") {
 
 if (pathname === "/test.html") {
   document.body.insertAdjacentHTML("afterbegin", Navbar());
-  const questionsContainer = document.querySelector("#questionsContainer");
-  const { questions } = new Question();
+  const _test = document.querySelector("#_test");
   const [candidate] = useLocalStore('ucode');
 
-  console.log(candidate._test);
-
-  // const x = Object.values(candidate._test).filter(Boolean).forEach(() => next());
-
   // if (candidate.isFailed) {
-  //   document.querySelector("#questionsContainer").innerHTML = BetterCallComponent();
+  //   document.querySelector("#_test").innerHTML = BetterCallComponent();
   // } else {
-  //   if (candidate.test) {
-  //     // candidate is already taken a test
+  //   if (!candidate._test.testOnline) {
+  //     questions.then(items => {
+  //       items.map(item => _test.insertAdjacentHTML('beforeend', QuestionComponent(item)))
+  //     });
+  //   } else {
+  //     Object.values(candidate._test).filter(Boolean).forEach(() => next());
   //   }
-
-  //   questions.then(items => {
-  //     items.map(item => questionsContainer.insertAdjacentHTML('beforeend', QuestionComponent(item)))
-  //   });
   // }
-  questions.then(items => {
-    items.map(item => questionsContainer.insertAdjacentHTML('beforeend', QuestionComponent(item)))
-  });
+  _test.innerHTML = Start();
 
 }

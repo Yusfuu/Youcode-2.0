@@ -1,9 +1,22 @@
+import { Question } from "../classes/Question";
 import { next } from "../helpers/next";
 import { useLocalStore } from "../helpers/useLocalStore";
 import { BetterCallComponent } from "./Lose";
 
+
+const QuestionCount = () => {
+  return (`<div class="m-10 md:mb-16">
+  <h2 id="QuestionCount" class="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">Question:
+    1/5</h2>
+</div>`)
+}
+
+
+
+
+
 let questionCount = 1;
-export const QuestionComponent = (question) => {
+const SingleQuestion = (question) => {
   const nextQuestion = (event) => {
 
     const [candidate, setCandidate] = useLocalStore('ucode');
@@ -17,7 +30,7 @@ export const QuestionComponent = (question) => {
       if (candidate.testOnline.points < 5) {
         // candidate loses
         candidate.isFailed = true;
-        document.querySelector("#questionsContainer").innerHTML = BetterCallComponent();
+        document.querySelector("#_test").innerHTML = BetterCallComponent();
       } else {
         // candidate wins
         next();
@@ -34,11 +47,11 @@ export const QuestionComponent = (question) => {
       candidate.testOnline.points += 1;
       setCandidate(candidate);
     }
-    const children = [...document.querySelector("#questionsContainer").children];
+
+    const children = [...document.querySelector("#_test").children];
     children.forEach((child) => child.classList.add('hidden'));
     children[questionCount].classList.remove('hidden');
     document.querySelector("#QuestionCount").innerHTML = `Question: ${++questionCount}/5`;
-
   }
 
   window.nextQuestion = nextQuestion;
@@ -49,6 +62,7 @@ export const QuestionComponent = (question) => {
   }).join('');
 
   return (`
+  
   <div  class="bg-gray-100 rounded-lg relative p-5 pt-8 ${question?.id === 1 ? "" : "hidden"}">
           <span
             class="w-8 h-8 inline-flex justify-center items-center bg-indigo-500 text-white rounded-full absolute -top-4 left-4">
@@ -64,4 +78,15 @@ export const QuestionComponent = (question) => {
           ${answersHtml}
         </div>
 `);
+}
+
+
+export const QuestionComponent = async () => {
+  const { questions } = new Question();
+  let _test = document.querySelector("#_test")
+  _test.insertAdjacentHTML('beforebegin', QuestionCount());
+  questions.then(items => {
+    items.map(item => _test.insertAdjacentHTML('beforeend', SingleQuestion(item)))
+  });
+  return null;
 }

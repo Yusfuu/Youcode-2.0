@@ -1,11 +1,13 @@
+import { QuestionComponent } from "../components/Question";
 import { AdministratorComponent } from "../components/Administrator";
+import { Done } from "../components/Done";
 import { MotivationComponent } from "../components/Motivation";
 import { SerioslyComponent } from "../components/Seriosly";
+import { Technical } from "../components/Technical";
 
 const nextStep = () => {
   let stepCount = 0;
-  const Tabs = [SerioslyComponent, MotivationComponent, AdministratorComponent];
-  return () => {
+  return async () => {
     stepCount++;
     [...document.querySelector('#step').children].forEach((child, key) => {
       if (key === stepCount) {
@@ -17,7 +19,7 @@ const nextStep = () => {
       }
       if (key < stepCount) child.classList.add('bg-green-500');
     });
-    document.querySelector("#questionsContainer").innerHTML = Tabs[stepCount - 1]();
+    document.querySelector("#_test").innerHTML = await [QuestionComponent, SerioslyComponent, MotivationComponent, AdministratorComponent, Technical, Done,][stepCount - 1]();
   }
 }
 

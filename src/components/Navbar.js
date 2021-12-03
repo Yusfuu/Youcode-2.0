@@ -33,11 +33,13 @@ export const Navbar = () => {
         </div> -->
         <div class="hidden sm:block sm:ml-6">
           <div id="step" class="flex space-x-4">
-            <a href="#" class="bg-gray-500 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Test Online</a>
-            <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Serious Game</a>
-            <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Motivation Test</a>
-            <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Administrator Test</a>
-            <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Technical Test</a>
+            <a href="#" class="bg-gray-500 text-white px-3 py-2 rounded-md text-sm font-medium">Start</a>
+            <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Test Online</a>
+            <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Serious Game</a>
+            <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Motivation Test</a>
+            <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Administrator Test</a>
+            <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Technical Test</a>
+            <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Welcome to Youcode</a>
           </div>
         </div>
       </div>
@@ -77,8 +79,5 @@ export const Navbar = () => {
     </div>
   </div>
 </nav>
-
-  
-  
-  `);
+`);
 };

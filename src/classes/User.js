@@ -46,7 +46,12 @@ export class Candidate {
         status: false,
         answer: null
       },
+      technicalTest: {
+        status: false,
+        answer: null
+      },
       _test: {
+        start: false,
         testOnline: false,
         motivationGame: false,
         seriousGame: false,

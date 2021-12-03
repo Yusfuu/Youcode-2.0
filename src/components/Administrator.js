@@ -1,4 +1,5 @@
 import { next } from "../helpers/next";
+import { useLocalStore } from "../helpers/useLocalStore";
 
 const questions = [
   "Joseph Smith was the founder of what religion?",
