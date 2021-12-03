@@ -399,6 +399,58 @@
         "technicalTest": false
       },
       "id": 7
+    },
+    {
+      "email": "youssefhajjari01@gmail.com",
+      "fullName": "Youssef Hajjari",
+      "cin": "HH8765",
+      "age": "20",
+      "password": "mp1j1872",
+      "role": "candidate",
+      "createdAt": "2021-12-03T16:10:45.673Z",
+      "isFailed": false,
+      "testOnline": {
+        "status": true,
+        "points": 5
+      },
+      "seriousGame": {
+        "status": true,
+        "answer": ""
+      },
+      "motivationGame": {
+        "status": true,
+        "answer": ""
+      },
+      "administratorTest": {
+        "status": true,
+        "answer": [
+          {
+            "question": "Joseph Smith was the founder of what religion?",
+            "answer": ""
+          },
+          {
+            "question": "111,111,111 x 111,111,111 = 12,345,678,987,654,321",
+            "answer": ""
+          },
+          {
+            "question": "111,111,111 x 111,111,111 = 12,345,678,987,654,321",
+            "answer": ""
+          }
+        ]
+      },
+      "technicalTest": {
+        "status": true,
+        "answer": "76"
+      },
+      "_test": {
+        "start": true,
+        "testOnline": true,
+        "motivationGame": true,
+        "seriousGame": true,
+        "administratorTest": true,
+        "technicalTest": true
+      },
+      "id": 8
     }
   ]
 }
