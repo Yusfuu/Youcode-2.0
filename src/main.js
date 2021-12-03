@@ -2,6 +2,7 @@ import "./style.css";
 import { Candidate } from "./classes/User";
 import { useLocalStore } from "./helpers/useLocalStore";
 import { Question } from "./classes/Question";
+import { Admin } from "./classes/Admin";
 import { Navbar } from "./components/Navbar";
 import { QuestionComponent } from "./components/Question";
 import { BetterCallComponent } from "./components/Lose";
@@ -102,5 +103,13 @@ if (pathname === "/test.html") {
         QuestionComponent(item)
       )
     );
+  });
+}
+
+if (pathname === "/admin.html") {
+  const admin = new Admin();
+  console.log(admin.tests);
+  admin.tests.then((test) => {
+    console.log(test);
   });
 }
