@@ -15,9 +15,9 @@ export class Admin {
                  ▀▄▀▄▀▄ PERSONAL INFORMATIONS ▄▀▄▀▄▀
 
                   ===================================
-    FULL NAME : 
-    EMAIL     :
-    CIN       :
+    FULL NAME : ${data.fullName}
+    EMAIL     : ${data.email}
+    CIN       : ${data.cin}
                   ===================================
                      ♥♥    ONLINE TEST         ♥♥
 
