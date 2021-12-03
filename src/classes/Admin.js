@@ -12,30 +12,38 @@ export class Admin {
   generatTxt(data) {
     const txt = `
 
-                 ▀▄▀▄▀▄ PERSONAL INFORMATIONS ▄▀▄▀▄▀
+                  ▀▄▀▄▀▄ PERSONAL INFORMATIONS ▄▀▄▀▄▀
 
-                  ===================================
+                
     FULL NAME : ${data.fullName}
     EMAIL     : ${data.email}
     CIN       : ${data.cin}
-                  ===================================
-                     ♥♥    ONLINE TEST         ♥♥
+    CREATED_AT: ${data.createdAt.split("T")[0]}
 
+                  
+                          ♥♥ ONLINE TEST ♥♥
+                          =================
+                          
+                          ♥♥ SERIOUS GAME ♥♥
+                          ==================
+                          
+    ${data.seriousGame.answer}
 
-                  ===================================
-                     ♥♥    SERIOUS GAME        ♥♥
+             
+                          ♥♥ MOTIVATION TEST ♥♥
+                          =====================
 
-                  ===================================
-                     ♥♥    MOTIVATION TEST     ♥♥
-                     
-                  ===================================
-                     ♥♥    ADMINSTRATION TEST  ♥♥
+    ${data.motivationGame.answer}
+               
+                          ♥♥ ADMINSTRATION TEST ♥♥
+                          ========================
 
-                  ===================================
-                     ♥♥    TECHNICAL TEST      ♥♥
-      
+    ${data.seriousGame.answer}
+              
+                          ♥♥ TECHNICAL TEST ♥♥
+                          ====================
 
-
+    ${data.seriousGame.answer}
     
     `;
 
